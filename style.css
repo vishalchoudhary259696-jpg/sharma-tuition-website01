@@ -79,18 +79,10 @@ header {
 /* ================= HERO ================= */
 
 .hero {
-    min-height: 650px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
-
-    max-width: 1200px;
-    margin: auto;
-
-    padding: 80px 25px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("classroom.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .hero-content {
