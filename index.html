@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sharma Tuition Centers | Quality Education</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>STC</span>
+                Sharma Tuition Centers
+            </div>
+
+            <div class="menu" id="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#timing">Timings</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🎓 Learn • Grow • Succeed
+            </div>
+
+            <h1>
+                Build Your Future With
+                <span>Sharma Tuition Centers</span>
+            </h1>
+
+            <p>
+                Quality education, personal attention and expert guidance
+                to help students achieve their academic goals.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#courses" class="btn primary">
+                    View Courses
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Enquire Now
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="card-icon">📚</div>
+
+            <h3>Smart Learning</h3>
+
+            <p>
+                Focused classes with a student-friendly learning environment.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <strong>2</strong>
+                    <small>Sessions</small>
+                </div>
+
+                <div>
+                    <strong>1-12</strong>
+                    <small>Classes</small>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <small>Focus</small>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about section" id="about">
+
+        <div class="section-title">
+            <span>ABOUT US</span>
+            <h2>Education That Makes A Difference</h2>
+            <p>
+                At Sharma Tuition Centers, we focus on building strong
+                fundamentals and helping students learn with confidence.
+            </p>
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>Expert Guidance</h3>
+                <p>
+                    Experienced teachers to guide students throughout
+                    their learning journey.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Personal Attention</h3>
+                <p>
+                    Individual attention to understand and improve
+                    every student's performance.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <h3>Better Results</h3>
+                <p>
+                    Regular practice, tests and progress tracking
+                    for continuous improvement.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Courses -->
+    <section class="courses section" id="courses">
+
+        <div class="section-title">
+
+            <span>COURSES & FEES</span>
+
+            <h2>Choose Your Class</h2>
+
+            <p>
+                Affordable tuition plans designed for different classes.
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+            <!-- Class 1-5 -->
+            <div class="course-card">
+
+                <div class="course-number">01</div>
+
+                <h3>Classes 1–5</h3>
+
+                <p>
+                    Foundation learning for young students.
+                </p>
+
+                <div class="price">
+                    ₹800
+                    <small>/ month</small>
+                </div>
+
+                <ul>
+                    <li>✓ All Subjects</li>
+                    <li>✓ Weekly Tests</li>
+                    <li>✓ Personal Attention</li>
+                </ul>
+
+                <button onclick="selectCourse('Classes 1–5')">
+                    Enquire Now
+                </button>
+
+            </div>
+
+
+            <!-- Class 6-8 -->
+            <div class="course-card popular">
+
+                <div class="popular-label">
+                    POPULAR
+                </div>
+
+                <div class="course-number">02</div>
+
+                <h3>Classes 6–8</h3>
+
+                <p>
+                    Strong concepts for middle school.
+                </p>
+
+                <div class="price">
+                    ₹1,200
+                    <small>/ month</small>
+                </div>
+
+                <ul>
+                    <li>✓ All Subjects</li>
+                    <li>✓ Regular Tests</li>
+                    <li>✓ Doubt Sessions</li>
+                </ul>
+
+                <button onclick="selectCourse('Classes 6–8')">
+                    Enquire Now
+                </button>
+
+            </div>
+
+
+            <!-- Class 9-10 -->
+            <div class="course-card">
+
+                <div class="course-number">03</div>
+
+                <h3>Classes 9–10</h3>
+
+                <p>
+                    Board-focused preparation.
+                </p>
+
+                <div class="price">
+                    ₹1,500
+                    <small>/ month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Maths & Science</li>
+                    <li>✓ Board Preparation</li>
+                    <li>✓ Mock Tests</li>
+                </ul>
+
+                <button onclick="selectCourse('Classes 9–10')">
+                    Enquire Now
+                </button>
+
+            </div>
+
+
+            <!-- Class 11-12 -->
+            <div class="course-card">
+
+                <div class="course-number">04</div>
+
+                <h3>Classes 11–12</h3>
+
+                <p>
+                    Advanced academic preparation.
+                </p>
+
+                <div class="price">
+                    ₹2,000
+                    <small>/ month</small>
+                </div>
+
+                <ul>
+                    <li>✓ Subject-focused Classes</li>
+                    <li>✓ Competitive Preparation</li>
+                    <li>✓ Test Series</li>
+                </ul>
+
+                <button onclick="selectCourse('Classes 11–12')">
+                    Enquire Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Timing -->
+    <section class="timing section" id="timing">
+
+        <div class="section-title">
+
+            <span>CLASS TIMINGS</span>
+
+            <h2>Choose Your Convenient Session</h2>
+
+            <p>
+                Flexible timings for students.
+            </p>
+
+        </div>
+
+
+        <div class="timing-container">
+
+            <div class="time-card morning">
+
+                <div class="time-icon">
+                    ☀️
+                </div>
+
+                <h3>Morning Session</h3>
+
+                <div class="time">
+                    9:00 AM – 12:00 PM
+                </div>
+
+                <p>
+                    Start your day with focused learning.
+                </p>
+
+            </div>
+
+
+            <div class="time-card evening">
+
+                <div class="time-icon">
+                    🌙
+                </div>
+
+                <h3>Evening Session</h3>
+
+                <div class="time">
+                    5:00 PM – 7:00 PM
+                </div>
+
+                <p>
+                    Perfect for students after school.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+
+    <div class="contact-box">
+
+        <div class="contact-content">
+
+            <span>ADMISSIONS OPEN</span>
+
+            <h2>Ready to Start Learning?</h2>
+
+            <p>
+                Contact Sharma Tuition Centers today and
+                get more information about courses, fees
+                and admissions.
+            </p>
+
+            <div class="contact-info">
+
+                <p>
+                    📞 <strong>Phone:</strong> 9350239696
+                </p>
+
+                <p>
+                    📍 <strong>Location:</strong> Karnal, Haryana
+                </p>
+
+            </div>
+
+            <!-- CALL BUTTON -->
+            <a href="tel:9350239696" class="call-button">
+                📞 Call Us
+            </a>
+
+        </div>
+
+    </div>
+
+    </section>
+                    
+                    
+                
+                  
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            STC
+        </div>
+
+        <h3>Sharma Tuition Centers</h3>
+
+        <p>
+            Quality Education • Better Future
+        </p>
+
+        <p class="copyright">
+            © 2026 Sharma Tuition Centers. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
