@@ -125,6 +125,40 @@ header {
   box-shadow: 0 25px 60px rgba(50, 40, 100, 0.1);
   text-align: center;
 }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #604cff;
+  color: white;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(96, 76, 255, 0.4);
+}
+
+.secondary {
+  border: 2px solid #604cff;
+  color: #604cff;
+  background: transparent;
+}
+
+.secondary:hover {
+  background: #604cff;
+  color: white;
+}
 
 .feature {
   text-align: center;
