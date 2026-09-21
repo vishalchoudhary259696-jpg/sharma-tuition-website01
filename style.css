@@ -9,11 +9,16 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: #f8faff;
-    color: #172033;
+  font-family: "Poppins", sans-serif;
+  color: #172033;
+  
+  /* Adds the image with a semi-transparent white overlay to keep text readable */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('');
+  background-size: cover;
+  background-position: center bottom; /* Ensures the pencils and books stay visible at the bottom */
+  background-attachment: fixed; /* Keeps the image frozen in place while you scroll down the page */
+  background-repeat: no-repeat;
 }
-
 
 /* ================= NAVBAR ================= */
 
