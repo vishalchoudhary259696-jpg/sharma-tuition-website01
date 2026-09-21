@@ -1,144 +1,215 @@
-// ===============================
-// Sharma Tuition Centers
-// Complete JavaScript
-// ===============================
+/* ==================================================
+   SHARMA TUITION CENTERS
+   JAVASCRIPT
+================================================== */
 
 
-// 1. MOBILE MENU TOGGLE
-function toggleMenu() {
-    const menu = document.getElementById("menu");
+/* ==================================================
+   MOBILE MENU
+================================================== */
 
-    if (menu) {
-        menu.classList.toggle("active");
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuButton.addEventListener("click", function () {
+
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+
+        menuButton.innerHTML = "✕";
+
+    } else {
+
+        menuButton.innerHTML = "☰";
+
     }
-}
+
+});
 
 
-// 2. CLOSE MENU AFTER CLICKING A LINK
-document.querySelectorAll("#menu a").forEach(link => {
+/* Close mobile menu */
+
+const navigationLinks =
+    document.querySelectorAll(".nav-links a");
+
+
+navigationLinks.forEach(function (link) {
+
     link.addEventListener("click", function () {
-        const menu = document.getElementById("menu");
 
-        if (menu) {
-            menu.classList.remove("active");
-        }
-    });
-});
+        navLinks.classList.remove("active");
 
+        menuButton.innerHTML = "☰";
 
-// 3. SMOOTH SCROLLING
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (event) {
-
-        const targetId = this.getAttribute("href");
-
-        if (targetId === "#") return;
-
-        const target = document.querySelector(targetId);
-
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
     });
 
 });
 
 
-// 4. COURSE ENQUIRY
-function selectCourse(course) {
+/* ==================================================
+   CURRENT YEAR
+================================================== */
 
-    alert(
-        "Thank you for your interest in " +
-        course +
-        "!\n\n" +
-        "For admission and fee details, please call Sharma Tuition Centers at 9050610267."
-    );
+const year =
+    document.getElementById("year");
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
 
 }
 
 
-// 5. DIRECT CALL FUNCTION
-function makeCall() {
-    const phoneNumber = "9350239696";
+/* ==================================================
+   CONTACT FORM → WHATSAPP
+================================================== */
 
-    // Try to open the Android phone dialer
-    window.location.href = "tel:" + phoneNumber;
-}
+const contactForm =
+    document.getElementById("contactForm");
+
+const formMessage =
+    document.getElementById("formMessage");
 
 
-// 6. SCROLL ANIMATION
-const sections = document.querySelectorAll(".section");
+contactForm.addEventListener("submit", function (event) {
 
-const observer = new IntersectionObserver(
-    function (entries) {
+    event.preventDefault();
 
-        entries.forEach(function (entry) {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+    const name =
+        document.getElementById("name")
+        .value
+        .trim();
 
-        });
 
-    },
-    {
-        threshold: 0.15
+    const phone =
+        document.getElementById("phone")
+        .value
+        .trim();
+
+
+    const message =
+        document.getElementById("message")
+        .value
+        .trim();
+
+
+    if (!name || !phone || !message) {
+
+        formMessage.textContent =
+            "Please fill in all the details.";
+
+        formMessage.style.color =
+            "#e5484d";
+
+        return;
+
+    }
+
+
+    /*
+       Sharma Tuition WhatsApp Number
+
+       Country code:
+       India = 91
+
+       Number:
+       9350239696
+    */
+
+    const whatsappNumber =
+        "919350239696";
+
+
+    const whatsappText =
+        "Hello Sharma Tuition Centers!%0A%0A" +
+
+        "Name: " +
+        encodeURIComponent(name) +
+
+        "%0APhone: " +
+        encodeURIComponent(phone) +
+
+        "%0AMessage: " +
+        encodeURIComponent(message);
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        whatsappText;
+
+
+    formMessage.textContent =
+        "Opening WhatsApp...";
+
+    formMessage.style.color =
+        "#635bff";
+
+
+    setTimeout(function () {
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }, 400);
+
+});
+
+
+/* ==================================================
+   PHONE INPUT
+================================================== */
+
+const phoneInput =
+    document.getElementById("phone");
+
+
+phoneInput.addEventListener(
+    "input",
+    function () {
+
+        this.value =
+            this.value.replace(
+                /[^0-9+\-\s]/g,
+                ""
+            );
+
     }
 );
 
-sections.forEach(function (section) {
-    observer.observe(section);
-});
+
+/* ==================================================
+   SIMPLE CARD HOVER
+================================================== */
+
+const cards =
+    document.querySelectorAll(
+        ".course-card, .why-card"
+    );
 
 
-// 7. ACTIVE NAVIGATION LINK
-const navLinks = document.querySelectorAll("#menu a");
+cards.forEach(function (card) {
 
-window.addEventListener("scroll", function () {
+    card.addEventListener(
+        "mouseenter",
+        function () {
 
-    let currentSection = "";
+            this.style.transition =
+                "transform 0.3s ease, box-shadow 0.3s ease";
 
-    document.querySelectorAll("section").forEach(function (section) {
-
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
         }
-
-    });
-
-
-    navLinks.forEach(function (link) {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + currentSection) {
-            link.classList.add("active");
-        }
-
-    });
-
-});
-
-
-// 8. PAGE LOAD
-window.addEventListener("load", function () {
-
-    document.body.classList.add("loaded");
-
-    console.log(
-        "Sharma Tuition Centers website loaded successfully."
     );
 
 });
+
+    
