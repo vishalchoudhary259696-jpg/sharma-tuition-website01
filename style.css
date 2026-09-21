@@ -84,134 +84,71 @@ header {
 /* ================= HERO ================= */
 
 .hero {
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("Screenshot_20260921_050141.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 25px;
+  /* Made transparent so the new global body background shows through at the top */
+  background: transparent;
 }
 
-.hero-content {
-    max-width: 650px;
+/* ========================================= */
+/* TRANSPARENT SECTIONS                      */
+/* ========================================= */
+
+.about {
+  background: transparent; 
 }
 
-.badge {
-    display: inline-block;
-
-    padding: 8px 15px;
-
-    border-radius: 30px;
-
-    background: #eeecff;
-    color: #5948e8;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    margin-bottom: 20px;
+.courses {
+  background: transparent; 
 }
 
-.hero h1 {
-    font-size: clamp(40px,5vw,65px);
-    line-height: 1.1;
-    margin-bottom: 25px;
+.timing {
+  background: transparent;
 }
 
-.hero h1 span {
-    color: #604cff;
+.contact {
+  background: transparent;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #667085;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.primary {
-    background: #604cff;
-    color: white;
-}
-
-.primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(96,76,255,0.3);
-}
-
-.secondary {
-    border: 2px solid #604cff;
-    color: #604cff;
-}
-
-.secondary:hover {
-    background: #604cff;
-    color: white;
-}
-
-
-/* Hero Card */
+/* ========================================= */
+/* SEMI-TRANSPARENT CARDS (FROSTED GLASS)    */
+/* ========================================= */
 
 .hero-card {
-    width: 330px;
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 25px;
-
-    box-shadow: 0 25px 60px rgba(50,40,100,0.12);
-
-    text-align: center;
+  width: 330px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 25px 60px rgba(50, 40, 100, 0.1);
+  text-align: center;
 }
 
-.card-icon {
-    font-size: 55px;
-    margin-bottom: 15px;
+.feature {
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 18px;
+  background: rgba(248, 247, 255, 0.85);
+  transition: 0.3s;
 }
 
-.hero-card h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
+.course-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(30, 30, 80, 0.1);
+  transition: 0.3s;
 }
 
-.hero-card p {
-    font-size: 14px;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-
-    margin-top: 30px;
-}
-
-.stats div {
-    display: flex;
-    flex-direction: column;
-}
-
-.stats strong {
-    font-size: 20px;
-    color: #604cff;
-}
-
-.stats small {
-    color: #777;
+.time-card {
+  text-align: center;
+  padding: 45px 30px;
+  border-radius: 22px;
+  background: rgba(247, 248, 255, 0.85);
+  transition: 0.3s;
 }
 
 
